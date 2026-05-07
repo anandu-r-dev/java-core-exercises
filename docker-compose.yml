@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  expense-api:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-db
+
+  postgres-db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: dev_admin
+      POSTGRES_PASSWORD: secure_password_9981
+      POSTGRES_DB: expense_tracker_db
+    ports:
+      - "5432:5432"
