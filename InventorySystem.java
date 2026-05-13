@@ -1,7 +1,7 @@
 class Smartphone {
     private String brand;
     private String model;
-    private int storageCapacity; // in GB
+    private int storageCapacity;
     private double price;
 
     public Smartphone(String brand, String model, int storageCapacity, double price) {
